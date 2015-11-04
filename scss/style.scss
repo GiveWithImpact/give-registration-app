@@ -1,0 +1,112 @@
+#reg-form {
+    /*violet*/
+    $main-color: #b3016e;
+    /*blue*/
+    $main-color: #1d7bab;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    margin-top: 30px;
+    background: #ddd;
+    border: 1px solid #aaa;
+    padding: 20px 20px;
+    padding-top: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+    background: url('../img/Logo.png') no-repeat bottom left #f9f9f9;
+    background-size: 50% auto;
+    .radio-group {
+        width: 100%;
+        background: transparent;
+        .user-type-label {
+            text-align: center;
+            font-weight: bold;
+            display: block;
+            width: 100%;
+        }
+        .radio-container {
+            &::after {
+                content: "";
+                position: relative;
+                display: block;
+                clear: both;
+            }
+            ;
+            >label {
+                float: left;
+                width: 50%;
+                display: block;
+                position: relative;
+                margin: 0;
+                border: none;
+                background: transparent;
+                .radio-icon {
+                    display: none;
+                }
+                .item-content {
+                    width: 100%;
+                    position: relative;
+                    padding: 4px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-align: center;
+                    background: transparent;
+                }
+            }
+            .item-radio input:checked ~ .item-content {
+                color: #fff;
+                background: $main-color;
+            }
+        }
+    }
+    .input-group {
+        margin-top: 10px;
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+        ;
+    }
+    .input-group-addon {
+        background: $main-color;
+        i {
+            color: #fff;
+        }
+    }
+    .form-header {
+        position: relative;
+    }
+    #form-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 20px 0px 20px 0px;
+        border-bottom: 1px solid #aaa;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    button.btn-submit {
+        display: block;
+        width: 50%;
+        margin-left: 50%;
+        margin-top: 20px;
+        background: $main-color;
+    }
+    .registration-warnings p {}
+    .registration-warnings p.ng-enter,
+    .registration-warnings p.ng-leave {
+        transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .3s;
+    }
+    .registration-warnings p.ng-enter,
+    .registration-warnings p.ng-leave.ng-leave-active {
+        opacity: 0;
+        transform: translate(-20px, 0);
+    }
+    .registration-warnings p.ng-leave,
+    .registration-warnings p.ng-enter.ng-enter-active {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.modal-text {
+    margin-top: 20px;
+    text-align: center;
+}

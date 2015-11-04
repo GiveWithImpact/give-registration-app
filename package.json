@@ -21,5 +21,7 @@
     "ionic-plugin-keyboard",
     "com.clone.phonegap.plugins.pushplugin"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    "android"
+  ]
 }
