@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: ['./scss/*.scss'],
-                tasks: ['sass'],
+                tasks: ['sass', 'cssmin'],
                 options: {
                     spawn: false,
                 },
@@ -37,6 +37,6 @@ module.exports = function(grunt) {
         },
     });
 
-    grunt.registerTask('default', ['sass', 'watch']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'watch']);
 
 };

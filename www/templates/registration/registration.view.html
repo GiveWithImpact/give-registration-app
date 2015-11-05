@@ -4,7 +4,7 @@
     </ion-header-bar>
     <ion-content>
         <div class="col-xs-12">
-            <form id="reg-form" class="bs-component" name="regForm" ng-submit="sendForm(regForm.$valid)" novalidate>
+            <form id="reg-form" class="bs-component" name="regForm" ng-submit="sendForm(regForm)" novalidate>
                 <div class="form-header">
                     <h2 id="form-title">
                    <span>Register your app</span>
@@ -14,7 +14,7 @@
                     <span class="input-group-addon">
                 <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
               </span>
-                    <input type="text" ng-model="regForm.name" name="regName" class="form-control" id="reg-form-name" placeholder="Name" required>
+                    <input type="text" ng-model="regForm.userData.name" name="regName" class="form-control" id="reg-form-name" placeholder="Name" required>
                 </div>
                 <div class="registration-warnings" ng-messages="regForm.regName.$error">
                     <p ng-message="required" ng-if="regForm.regName.$touched">This field is required</p>
@@ -23,7 +23,7 @@
                     <span class="input-group-addon">
                 <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
               </span>
-                    <input type="email" ng-model="regForm.email" name="regEmail" class="form-control" id="reg-form-email" placeholder="E-mail" required>
+                    <input type="email" ng-model="regForm.userData.email" name="regEmail" class="form-control" id="reg-form-email" placeholder="E-mail" required>
                 </div>
                 <div class="registration-warnings" ng-messages="regForm.regEmail.$error">
                     <p ng-message="required" ng-if="regForm.regEmail.$touched">This field is required</p>
@@ -33,7 +33,7 @@
                     <span class="input-group-addon">
                 <i class="glyphicon glyphicon-sunglasses" aria-hidden="true"></i>
               </span>
-                    <input type="password" ng-model="regForm.password" name="regPassword" class="form-control" id="reg-form-pass" placeholder="Password" required ng-minlength="6">
+                    <input type="password" ng-model="regForm.userData.password" name="regPassword" class="form-control" id="reg-form-pass" placeholder="Password" required ng-minlength="6">
                 </div>
                 <div class="registration-warnings" ng-messages="regForm.regPassword.$error">
                     <p ng-message="required" ng-if="regForm.regPassword.$touched">This field is required</p>
@@ -41,8 +41,8 @@
                 </div>
                 <div class="input-group radio-group">
                     <div class="radio-container">
-                        <ion-radio ng-model="regForm.userType" ng-value="'Charity'" reqiured>Charity User</ion-radio>
-                        <ion-radio ng-model="regForm.userType" ng-value="'Donor'" required>Donor</ion-radio>
+                        <ion-radio ng-model="regForm.userData.user_type_id" ng-value="'3'" reqiured>Charity User</ion-radio>
+                        <ion-radio ng-model="regForm.userData.user_type_id" ng-value="'2'" required>Donor</ion-radio>
                     </div>
                 </div>
                 <div class="input-group radio-group">

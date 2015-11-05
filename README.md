@@ -12,3 +12,4 @@ Simple, internal utility for registering a user and their mobile device
 
 +Run `ionic serve` for preview on browser.
 +Run `ionic platform add android` then plug your android device and run `ionic build android` and `ionic run android` for previev on mobile device. 
++Run `grunt` to compile scss to css and minify them.
