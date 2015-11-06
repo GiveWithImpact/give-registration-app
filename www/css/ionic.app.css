@@ -8085,7 +8085,6 @@ a.button {
   transition-duration: 0s; }
 
 #reg-form {
-  /*violet*/
   /*blue*/
   margin-left: auto;
   margin-right: auto;
@@ -8117,7 +8116,7 @@ a.button {
       display: block;
       position: relative;
       margin: 0;
-      border: none;
+      border: 1px solid #1d7bab;
       background: transparent; }
       #reg-form .radio-group .radio-container > label .radio-icon {
         display: none; }

@@ -19,10 +19,10 @@ angular.module('starter')
         AndroidConfig = {
             'senderID': GOOGLE_SENDER_ID
         };
-
         //Send dataFrom and then checks regForm validation.
         //If valid show modal box with confirm text and send request to GCM.
         $scope.sendForm = function(regForm) {
+            console.log($scope.regForm);
             if (regForm.$valid) {
                 $scope.modal.show();
                 UserData = regForm.userData
@@ -30,7 +30,7 @@ angular.module('starter')
                 $cordovaPush.register(AndroidConfig)
             }
         };
-
+        $scope.checked = true;
         //As name sugest closeModal box/ go back to regForm.
         $scope.closeModal = function() {
             $scope.modal.hide();
@@ -39,7 +39,7 @@ angular.module('starter')
         //Listen if GCM register_id is set, then execute postData.
         $rootScope.$on('$cordovaPush:notificationReceived', postData);
 
-        //Send user data with GCM reg_id to the server.
+        //Send user data with GCM reg_id to the server using $http.post .
         function postData(event, notification) {
             if (notification.event === 'registered') {
                 UserData["gcm_reg_code"] = notification.regid;

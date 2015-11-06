@@ -1,6 +1,4 @@
 #reg-form {
-    /*violet*/
-    $main-color: #b3016e;
     /*blue*/
     $main-color: #1d7bab;
     margin-left: auto;
@@ -30,14 +28,13 @@
                 display: block;
                 clear: both;
             }
-            ;
             >label {
                 float: left;
                 width: 50%;
                 display: block;
                 position: relative;
                 margin: 0;
-                border: none;
+                border: 1px solid $main-color;
                 background: transparent;
                 .radio-icon {
                     display: none;
@@ -63,7 +60,6 @@
         &:nth-child(1) {
             margin-top: 0;
         }
-        ;
     }
     .input-group-addon {
         background: $main-color;
