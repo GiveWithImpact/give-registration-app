@@ -22,7 +22,6 @@ angular.module('starter')
         //Send dataFrom and then checks regForm validation.
         //If valid show modal box with confirm text and send request to GCM.
         $scope.sendForm = function(regForm) {
-            console.log($scope.regForm);
             if (regForm.$valid) {
                 $scope.modal.show();
                 UserData = regForm.userData

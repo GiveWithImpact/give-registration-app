@@ -8105,32 +8105,41 @@ a.button {
       font-weight: bold;
       display: block;
       width: 100%; }
-    #reg-form .radio-group .radio-container::after {
-      content: "";
-      position: relative;
-      display: block;
-      clear: both; }
     #reg-form .radio-group .radio-container > label {
-      float: left;
-      width: 50%;
-      display: block;
+      display: inline-block;
+      width: 48%;
       position: relative;
-      margin: 0;
-      border: 1px solid #1d7bab;
-      background: transparent; }
-      #reg-form .radio-group .radio-container > label .radio-icon {
-        display: none; }
-      #reg-form .radio-group .radio-container > label .item-content {
-        width: 100%;
-        position: relative;
-        padding: 4px;
-        font-size: 14px;
-        font-weight: bold;
-        text-align: center;
-        background: transparent; }
-    #reg-form .radio-group .radio-container .item-radio input:checked ~ .item-content {
-      color: #fff;
-      background: #1d7bab; }
+      margin: 0; }
+      #reg-form .radio-group .radio-container > label > span {
+        vertical-align: middle; }
+    #reg-form .radio-group .radio-container input[type="radio"] {
+      opacity: 0;
+      position: absolute; }
+    #reg-form .radio-group .radio-container input[type="radio"] + label > .radial-circle {
+      position: relative;
+      border-radius: 14px;
+      width: 20px;
+      height: 20px;
+      background-color: #f0f0f0;
+      border: 1px solid #bcbcbc;
+      margin: 0 0.5em 0 0;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 20px; }
+    #reg-form .radio-group .radio-container input[type="radio"]:checked + label > .radial-circle {
+      background: #1d7bab;
+      border-color: #41a6bf; }
+    #reg-form .radio-group .radio-container input[type="radio"]:checked + label > .radial-circle::after {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      border-radius: 5px;
+      border: none;
+      background: #f0f0f0; }
   #reg-form .input-group {
     margin-top: 10px; }
     #reg-form .input-group:nth-child(1) {

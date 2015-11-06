@@ -41,8 +41,10 @@
                 </div>
                 <div class="input-group radio-group">
                     <div class="radio-container">
-                        <ion-radio ng-model="regForm.userData.user_type_id" ng-value="'3'" reqiured>Charity User</ion-radio>
-                        <ion-radio ng-model="regForm.userData.user_type_id" ng-value="'2'" required>Donor</ion-radio>
+                        <input type="radio" id="charity" ng-model="regForm.userData.user_type_id" ng-value="'3'" reqiured>
+                        <label for="charity"><span class="radial-circle"></span><span>Charity User</span></label>
+                        <input type="radio" id="donor" ng-model="regForm.userData.user_type_id" ng-value="'2'" required>
+                        <label for="donor"><span class="radial-circle"></span><span>Donor</span></label>
                     </div>
                 </div>
                 <div class="input-group radio-group">
